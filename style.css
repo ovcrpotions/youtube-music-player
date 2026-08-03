@@ -1,0 +1,516 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f8e9f0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  color: #6f5362;
+}
+
+
+/* MAIN DIARY */
+
+.music-diary {
+  width: 90%;
+  max-width: 430px;
+
+  padding: 32px 26px;
+
+  text-align: center;
+
+  background: #fffafc;
+
+  border: 1px solid #ead5df;
+  border-radius: 28px;
+
+  box-shadow: 0 15px 40px rgba(100, 70, 90, 0.12);
+}
+
+
+/* HEADER */
+
+header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: normal;
+
+  color: #704f61;
+}
+
+header p {
+  margin: 8px 0 25px;
+
+  font-size: 13px;
+
+  color: #a48693;
+}
+
+
+/* YOUTUBE PLAYER */
+
+.youtube-player {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #f4e5ec;
+
+  border: 1px solid #ead5df;
+  border-radius: 18px;
+}
+
+.youtube-player iframe {
+  display: block;
+
+  width: 100%;
+  height: 220px;
+
+  border: none;
+}
+
+
+/* NOW PLAYING */
+
+.now-playing {
+  margin: 18px 0;
+}
+
+.now-playing-label {
+  margin: 0 0 5px;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  color: #b0939f;
+}
+
+.now-playing h2 {
+  margin: 0;
+
+  overflow: hidden;
+
+  font-size: 17px;
+  font-weight: normal;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #6f5362;
+}
+
+
+/* MUSIC CONTROLS */
+
+.controls {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 18px 0;
+}
+
+.controls button {
+  width: 42px;
+  height: 38px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #dfc5d2;
+  border-radius: 14px;
+
+  background: #fff;
+
+  color: #765769;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+
+  background: #f8e9f0;
+}
+
+
+/* PLAY / PAUSE BUTTON */
+
+.controls .main-control {
+  width: 52px;
+  min-width: 52px;
+  height: 42px;
+
+  background: #d9aabd;
+
+  border-color: #d9aabd;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+.controls .main-control:hover {
+  background: #d19eb3;
+}
+
+
+/* VOLUME */
+
+.volume-control {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 15px 0 25px;
+
+  font-size: 11px;
+
+  color: #a48693;
+}
+
+.volume-control span {
+  white-space: nowrap;
+}
+
+.volume-control input {
+  flex: 1;
+}
+
+
+/* SLIDER */
+
+input[type="range"] {
+  accent-color: #c99caf;
+
+  cursor: pointer;
+}
+
+
+/* SONG INPUT */
+
+.song-input {
+  margin-top: 10px;
+}
+
+.song-input label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 13px;
+}
+
+.song-input input {
+  width: 100%;
+
+  padding: 12px 15px;
+
+  border: 1px solid #dfc5d2;
+  border-radius: 18px;
+
+  outline: none;
+
+  background: white;
+
+  color: #6f5362;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.song-input input::placeholder {
+  color: #bba3ae;
+}
+
+.song-input input:focus {
+  border-color: #c99caf;
+
+  box-shadow: 0 0 0 3px rgba(217, 170, 189, 0.15);
+}
+
+
+/* ADD SONG BUTTONS */
+
+.add-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.add-buttons button {
+  margin-top: 10px;
+
+  padding: 10px 14px;
+
+  border-radius: 18px;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+#addSongButton {
+  background: #d9aabd;
+
+  border: 1px solid #d9aabd;
+
+  color: white;
+}
+
+#playNowButton {
+  background: white;
+
+  border: 1px solid #dfc5d2;
+
+  color: #765769;
+}
+
+.add-buttons button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+}
+
+
+/* PLAYLIST */
+
+.playlist {
+  margin-top: 28px;
+
+  padding-top: 22px;
+
+  border-top: 1px dashed #dfcbd4;
+}
+
+.playlist h2 {
+  margin: 0 0 15px;
+
+  font-size: 19px;
+  font-weight: normal;
+}
+
+#playlistSongs {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* PLAYLIST SONG */
+
+.playlist-song {
+  display: grid;
+
+  grid-template-columns: 55px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 8px;
+
+  background: white;
+
+  border: 1px solid #ead5df;
+  border-radius: 15px;
+
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.playlist-song:hover {
+  border-color: #d9b7c6;
+
+  box-shadow: 0 5px 15px rgba(100, 70, 90, 0.06);
+}
+
+
+/* THUMBNAIL */
+
+.song-thumbnail {
+  display: block;
+
+  width: 55px;
+  height: 40px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  background: #f4e5ec;
+}
+
+
+/* SONG INFO */
+
+.song-info {
+  display: flex;
+
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+.song-number {
+  flex-shrink: 0;
+
+  margin-right: 5px;
+
+  color: #b0939f;
+
+  font-size: 12px;
+}
+
+.song-title {
+  overflow: hidden;
+
+  font-size: 12px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #6f5362;
+}
+
+.song-author {
+  margin-top: 3px;
+
+  overflow: hidden;
+
+  font-size: 10px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #aa909c;
+}
+
+
+/* PLAYLIST BUTTONS */
+
+.song-buttons {
+  display: flex;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+}
+
+.song-buttons button {
+  margin: 0;
+
+  padding: 5px 7px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #f8e9f0;
+
+  color: #765769;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.song-buttons button:hover {
+  background: #eed9e2;
+
+  transform: translateY(-1px);
+}
+
+.song-buttons .delete-button {
+  background: transparent;
+
+  color: #a48693;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .music-diary {
+    width: 94%;
+
+    padding: 25px 18px;
+  }
+
+  .youtube-player iframe {
+    height: 190px;
+  }
+
+  .controls {
+    gap: 4px;
+  }
+
+  .controls button {
+    width: 38px;
+    height: 36px;
+  }
+
+  .controls .main-control {
+    width: 50px;
+    min-width: 50px;
+  }
+
+  .add-buttons button {
+    padding: 9px 10px;
+  }
+
+  .playlist-song {
+    grid-template-columns: 50px minmax(0, 1fr) auto;
+
+    gap: 7px;
+  }
+
+  .song-thumbnail {
+    width: 50px;
+    height: 37px;
+  }
+
+  .song-buttons button {
+    padding: 5px 6px;
+  }
+
+}
