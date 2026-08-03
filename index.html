@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>my music diary</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="music-diary">
+
+    <header>
+      <h1>my music</h1>
+    </header>
+
+
+    <!-- PLAYER -->
+
+    <section class="player">
+
+      <div class="youtube-player">
+        <iframe
+          id="youtubePlayer"
+          src=""
+          title="YouTube music player"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+
+      <!-- CURRENT SONG -->
+
+      <div class="now-playing">
+
+        <p class="now-playing-label">
+          now playing
+        </p>
+
+        <h2 id="currentSong">
+          nothing playing
+        </h2>
+
+      </div>
+
+
+      <!-- CONTROLS -->
+
+      <div class="controls">
+
+        <button id="backButton" title="Previous song">
+          ⏮
+        </button>
+
+        <button id="restartButton" title="Restart song">
+          ↻
+        </button>
+
+        <button id="playPauseButton" class="main-control">
+          ▶
+        </button>
+
+        <button id="nextButton" title="Next song">
+          ⏭
+        </button>
+
+      </div>
+
+
+      <!-- VOLUME -->
+
+      <div class="volume-control">
+
+        <span>volume</span>
+
+        <input
+          id="volumeSlider"
+          type="range"
+          min="0"
+          max="100"
+          value="70"
+        >
+
+      </div>
+
+
+      <!-- ADD SONG -->
+
+      <div class="song-input">
+
+        <label for="youtubeLink">
+          add a YouTube song
+        </label>
+
+        <input
+          id="youtubeLink"
+          type="text"
+          placeholder="paste youtube link..."
+        >
+
+        <div class="add-buttons">
+
+          <button id="addSongButton">
+            add to playlist
+          </button>
+
+          <button id="playNowButton">
+            play now
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PLAYLIST -->
+
+    <section class="playlist">
+
+      <h2>my playlist</h2>
+
+      <div id="playlistSongs">
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
